@@ -14,3 +14,4 @@ use App\Http\Controllers\EstudianteController;
 */
 
 Route::get('/',[EstudianteController::class,'index'])->name('estudiante.indexEstudiante');
+Route::get('/inicio',[EstudianteController::class,'inicio'])->name('inicio.index');
