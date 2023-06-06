@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 
 namespace App\Http\Controllers;
 
@@ -10,4 +10,3 @@ class InicioController extends Controller
         return view('inicio.index');
     }
 }
- -->
