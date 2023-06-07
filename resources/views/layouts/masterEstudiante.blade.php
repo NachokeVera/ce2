@@ -24,7 +24,7 @@
             <a class="nav-link" href="#">Estado</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Cerrar sesión</a>
+            <a class="nav-link" href="{{route('inicio.index')}}">Cerrar sesión</a>
           </li>
         </ul>
       </div>

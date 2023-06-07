@@ -8,49 +8,20 @@
 
     <title>Document</title>
 </head>
-<body class="bg-body-secondary">
-    <div class="container-fluid vh-100 d-flex flex-column justify-content-lg-center">
-        <!-- <button class="btn btn-primary">Primary</button>
-        <button class="btn btn-secondary">Secondary</button> -->
-
-        <div class="row">
-            <div class="col-12 col-lg-8 offset-lg-2">
-                <div class="row bg-light" style="height: 25rem;">
-                    <!-- Titulo y logo -->
-                    <div
-                        class="col-lg-4 bg-primary d-flex flex-column justify-content-center align-items-center text-center pt-3">
-
-                        <div class="bg-white p-2 mb-3 rounded">
-                        </div>
-                        <h4 class="text-light">Sistema de Campeonato de Fútbol</h4>
-                        <h6 class="text-light">DOWN303 - Diseño y Programación Orientado de la Web</h6>
-                    </div>
-                    <!-- / fin titulo y logo -->
-
-                    <!-- Formulario -->
-                    <div class="col-lg-8 bg-white">
-                        <h4>Inicio de Sesión</h4>
-                        <small>Proporcione sus credenciales para ingresar al sistema</small>
-                        <div class="card">
-                            <div class="card-body">
-                                <form action="">
-                                    <div class="mb-3">
-                                        <label for="username" class="form-label">Nombre de Usuario</label>
-                                        <input type="text" id="username" class="form-control">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="password" class="form-label">Contraseña</label>
-                                        <input type="password" id="password" class="form-control">
-                                    </div>
-                                    <div class="mb-3 text-end">
-                                        {{-- <a href="{{route('home.index')}}" class="btn btn-success">Iniciar Sesión</a> --}}
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /fin formulario -->
-                </div>
+<body class="bg-body-secondary text-center">
+    
+    <div class="container-fluid">
+        <h1 class="fw-normal">Elija Tipo de usuario</h1>
+        <hr class="mb-5">
+        <div class="row ">
+            <div class="col-12 col-sm-4 mb-3 d-flex">
+                <a class="btn btn-secondary btn-lg flex-fill" href="{{route('estudiante.indexEstudiante')}}" role="button">Estudiante</a>
+            </div>
+            <div class="col-12 col-sm-4 mb-3 d-flex ">
+                <a class="btn btn-secondary btn-lg flex-fill" href="#" role="button">Profesor</a>
+            </div>
+            <div class="col-12 col-sm-4 mb-3 d-flex">
+                <a class="btn btn-secondary btn-lg flex-fill" href="#" role="button">Administrador</a>
             </div>
         </div>
     </div>

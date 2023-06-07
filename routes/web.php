@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EstudianteController;
+use App\Http\Controllers\InicioController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +14,8 @@ use App\Http\Controllers\EstudianteController;
 |
 */
 /*Rutas de estudiante */
-Route::get('/',[EstudianteController::class,'index'])->name('estudiante.indexEstudiante');
-Route::post('/',[EstudianteController::class,'store'])->name('estudiante.indexEstudiante');
+Route::get('/',[InicioController::class,'index'])->name('inicio.index');
 
-Route::get('/inicio',[InicioController::class,'index'])->name('inicio.index');
+Route::get('/estudiante',[EstudianteController::class,'index'])->name('estudiante.indexEstudiante');
+Route::post('/estudiante',[EstudianteController::class,'store'])->name('estudiante.indexEstudiante');
+
