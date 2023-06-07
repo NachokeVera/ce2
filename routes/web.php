@@ -12,6 +12,8 @@ use App\Http\Controllers\EstudianteController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+/*Rutas de estudiante */
 Route::get('/',[EstudianteController::class,'index'])->name('estudiante.indexEstudiante');
-Route::get('/inicio',[EstudianteController::class,'inicio'])->name('inicio.index');
+Route::post('/',[EstudianteController::class,'store'])->name('estudiante.indexEstudiante');
+
+Route::get('/inicio',[InicioController::class,'index'])->name('inicio.index');

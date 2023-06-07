@@ -9,7 +9,8 @@
                     <h4 class="fw-normal">Ingrese Propuesta</h4>
                 </div>
                 <div class="card-body">
-                    <form action="">
+                    <form action="" method="POST">
+                        @csrf
                         <div class="mb-3">
                             <label for="propuestaInput" class="form-label">Suba su propuesta</label>
                             <input class="form-control" type="file" id="propuestaInput">
@@ -25,4 +26,5 @@
         </div>
     </div>
 </div>
+
 @endsection
