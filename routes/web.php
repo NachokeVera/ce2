@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\InicioController;
+use App\Http\Controllers\AdministradorController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,4 +19,8 @@ Route::get('/',[InicioController::class,'index'])->name('inicio.index');
 
 Route::get('/estudiante',[EstudianteController::class,'index'])->name('estudiante.indexEstudiante');
 Route::post('/estudiante',[EstudianteController::class,'store'])->name('estudiante.indexEstudiante');
+
+Route::get('/administrador',[AdministradorController::class,'index'])->name('administrador.indexAdministrador');
+Route::post('/administrador',[AdministradorController::class,'store'])->name('administrador.store');
+
 
