@@ -11,19 +11,19 @@
                         <div class="row g-3">
                             <div class="col-12">
                                 <label for="rut" class="form-label">Rut</label>
-                                <input type="text" class="form-control" id="rut" placeholder="Ej: 12345678-9">
+                                <input type="text" class="form-control" id="rut" name="rut" placeholder="Ej: 12345678-9">
                             </div>
                             <div class="col-6">
                                 <label for="nombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" placeholder="Ej: Juan">
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej: Juan">
                             </div>
                             <div class="col-6">
                                 <label for="apellido" class="form-label">Apellido</label>
-                                <input type="text" class="form-control" id="apellido" placeholder="Ej: Vera">
+                                <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ej: Vera">
                             </div>
                             <div class="col-12">                
                                 <label for="email" class="form-label">Email</label>
-                                <input type="text" class="form-control" id="email" placeholder="Ej: name@example.com">                            
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Ej: name@example.com">                            
                             </div>
                             <div class="d-flex justify-content-between">            
                                 <button class="btn btn-secondary" type="reset">Limpiar</button>
@@ -47,24 +47,14 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th>20.805.198-9</th>
-                    <td>Juan</td>
-                    <td>Vera</td>
-                    <td>meh@meh.com</td>
-                  </tr>
-                  <tr>
-                    <th>20.805.198-9</th>
-                    <td>Juan</td>
-                    <td>Vera</td>
-                    <td>meh@meh.com</td>
-                  </tr>
-                  <tr>
-                    <th>20.805.198-9</th>
-                    <td>Juan</td>
-                    <td>Vera</td>
-                    <td>meh@meh.com</td>
-                  </tr>
+                    @foreach ($estudiantes as $var=>$estudiantes)
+                    <tr>
+                        <td>{{$estudiantes->rut}}</td>
+                        <td>{{$estudiantes->nombre}}</td>
+                        <td>{{$estudiantes->apellido}}</td>
+                        <td>{{$estudiantes->email}}</td>
+                    </tr>
+                  @endforeach
                 </tbody>
               </table>
         </div>
