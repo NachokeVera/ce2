@@ -18,7 +18,7 @@ use App\Http\Controllers\AdministradorController;
 Route::get('/',[InicioController::class,'index'])->name('inicio.index');
 
 Route::get('/estudiante',[EstudianteController::class,'index'])->name('estudiante.indexEstudiante');
-Route::post('/estudiante',[EstudianteController::class,'store'])->name('estudiante.indexEstudiante');
+Route::post('/estudiante',[EstudianteController::class,'store'])->name('estudiante.store');
 
 Route::get('/administrador',[AdministradorController::class,'index'])->name('administrador.indexAdministrador');
 Route::post('/administrador',[AdministradorController::class,'store'])->name('administrador.store');
