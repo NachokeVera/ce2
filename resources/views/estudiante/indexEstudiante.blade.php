@@ -6,19 +6,21 @@
         <div class="col">            
             <h4 class="fw-normal">Ingrese Propuesta</h4>
             <div class="card p-3 d-flex d-sm-inline-flex ">
-                <form action="">
+                <form action="{{route('estudiante.store')}}" enctype="multipart/form-data" method="POST">
+                    @csrf
                     <div class="mb-3">
                         <label for="alumnosInput" class="form-label">Quien es usted</label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Rut - Nombre</option>
-                            <option value="1">20.805.198-9 Ignacio Vera</option>
-                            <option value="2">20.805.198-9 Ignacio Vera</option>
-                            <option value="3">20.805.198-9 Ignacio Vera</option>
+                        <select class="form-select" name="estudiante" id="estudiante" >
+                            <option selected>---</option>
+                            @foreach ($estudiantes as $estudiantes)
+                                <option value="{{$estudiantes->rut}}">{{$estudiantes->rut.' '.$estudiantes->nombre.' '.$estudiantes->apellido}}</option>
+                            @endforeach
+                            </select>
                           </select>
                     </div>
                     <div class="mb-3">
                         <label for="propuestaInput" class="form-label">Suba su propuesta</label>
-                        <input class="form-control" type="file" id="propuestaInput">
+                        <input class="form-control" type="file" id="propuestaInput" name="propuestaInput" accept=".pdf">
                     </div>
                     <div class="d-flex justify-content-between">            
                         <button class="btn btn-secondary mx-3" type="reset">Limpiar</button>
