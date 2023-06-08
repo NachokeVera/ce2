@@ -11,9 +11,9 @@
                     <div class="mb-3">
                         <label for="alumnosInput" class="form-label">Quien es usted</label>
                         <select class="form-select" name="estudiante" id="estudiante" >
-                            <option selected>---</option>
+                            <option selected>Rut - Nombre</option>
                             @foreach ($estudiantes as $estudiantes)
-                                <option value="{{$estudiantes->rut}}">{{$estudiantes->rut.' '.$estudiantes->nombre.' '.$estudiantes->apellido}}</option>
+                                <option value="{{$estudiantes->rut}}">{{$estudiantes->rut.' - '.$estudiantes->nombre.' '.$estudiantes->apellido}}</option>
                             @endforeach
                             </select>
                           </select>

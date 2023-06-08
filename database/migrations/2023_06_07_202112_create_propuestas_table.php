@@ -17,7 +17,7 @@ return new class extends Migration
             $table->tinyInteger('estado')->default(0);
             $table->string('estudiantes_rut',10)->nullable();            
             $table->date('fecha');
-            
+            $table->timestamps();
 
             $table->foreign('estudiantes_rut')->references('rut')->on('estudiantes');
         });
