@@ -20,7 +20,7 @@ class AdministradorController extends Controller
         $estudiante->apellido = $request->apellido;
         $estudiante->email = $request->email;
 
-       $estudiante->save();
+        $estudiante->save();
         return redirect()->route('administrador.indexAdministrador');
     }
 }
